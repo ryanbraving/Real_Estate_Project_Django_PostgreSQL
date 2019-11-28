@@ -3,16 +3,22 @@ from django.shortcuts import render, redirect
 # Create your views here.
 
 
+def register(request):
+    if request.method == 'POST':
+        # Register User
+        return
+    return render(request, 'accounts/register.html')
+
+
 def login(request):
+    if request.method == 'POST':
+        # login user
+        return
     return render(request, 'accounts/login.html')
 
 
 def logout(request):
     return redirect('index')
-
-
-def register(request):
-    return render(request, 'accounts/register.html')
 
 
 def dashboard(request):

@@ -66,9 +66,8 @@ img {
 #work {
   padding: 6rem 0; }
 
-.listing-preview a {
-  /* position: relative;  */
-}
+.listing-preview  a {
+  position: relative; }
 
 @media (max-width: 991px) {
   #showcase {

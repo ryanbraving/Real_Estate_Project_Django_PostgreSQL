@@ -31,7 +31,7 @@ def contact(request):
                           email=email, phone=phone, message=message, user_id=user_id)
 
         contact.save()
-        send email
+        # send email
         send_mail(
             'Property Listing Inquiry',
             'Thete has been an inquiry for' + listing +

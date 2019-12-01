@@ -36,7 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h2>Let Us Help You Find Your Dream Home</h2>
+        <h2 class="text-center">Let Us Help You Find Your Dream Home</h2>
         <!-- <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p> -->
         <img src="{% static 'img/about2.jpeg' %}" alt="">
         <p class="mt-4">Our award-winning brand, offices and team members are proud to be
@@ -50,10 +50,11 @@
       <div class="col-md-4">
         {% if mvp_realtors %}
         {% for realtor in mvp_realtors %}
+        <h2 class="text-center">Agent Of The Month</h2>
         <div class="card">
           <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
           <div class="card-body">
-            <h5 class="card-title">Agent Of The Month</h5>
+            <!-- <h5 class="card-title">Agent Of The Month</h5> -->
             <h6 class="text-warning">{{ realtor.name }}</h6>
             <p class="card-text">{{ realtor.description }}</p>
           </div>

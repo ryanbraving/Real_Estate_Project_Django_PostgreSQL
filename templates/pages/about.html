@@ -9,8 +9,9 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-md-12">
-        <h1 class="display-4">About RB Real Estate</h1>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+        <h1 class="display-4">About Ryan Braving Agency</h1>
+        <p class="lead">At RB agency we are proud to provide a full range of real estate services in our local
+          communities and international networks.</p>
       </div>
     </div>
   </div>
@@ -35,13 +36,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h2>We Search For The Perfect Home</h2>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
-        <img src="{% static 'img/about.jpg' %}" alt="">
-        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae
-          ad saepe ex, amet
-          neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-          commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+        <h2>Let Us Help You Find Your Dream Home</h2>
+        <!-- <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p> -->
+        <img src="{% static 'img/about2.jpeg' %}" alt="">
+        <p class="mt-4">Our award-winning brand, offices and team members are proud to be
+          continuously recognised for our commitment to providing the finest experience in real estate.
+          Our accolades include being voted the most trusted real estate brand 7 years in a row. With over 1 million+
+          homes for sale available on the website, we can match you with a house you
+          will want to call home. </p>
       </div>
 
 
@@ -51,8 +53,8 @@
         <div class="card">
           <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
           <div class="card-body">
-            <h5 class="card-title">Seller Of The Month</h5>
-            <h6 class="text-secondary">{{ realtor.name }}</h6>
+            <h5 class="card-title">Agent Of The Month</h5>
+            <h6 class="text-warning">{{ realtor.name }}</h6>
             <p class="card-text">{{ realtor.description }}</p>
           </div>
         </div>
@@ -66,29 +68,31 @@
 
 <!-- Work -->
 <section id="work" class="bg-dark text-white text-center">
-  <h2 class="display-4">We Work For You</h2>
-  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+  <h2 class="display-4">Millions of Homes Available</h2>
+  <h4>With over 1 million+ homes for sale available on the website, we can match you with a house you will want to call
+    home.</h4>
   <hr>
-  <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+  <a href="{% url 'listings' %}" class="btn btn-warning text-white btn-lg">View All Our Listings</a>
 </section>
 
 <!-- Team -->
 <section id="team" class="py-5">
   <div class="container">
-    <h2 class="text-center">Our Team</h2>
+    <h2 class="text-center">Your Agents</h2>
     <div class="row text-center">
       {% if realtors %}
       {% for realtor in realtors %}
       <div class="col-md-4">
         <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
         <h4>{{ realtor.name }}</h4>
-        <p class="text-success">
-          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+        <p class="text-warning">
+          <i class="fas fa-award text-warning mb-3"></i> Realtor</p>
         <hr>
         <p>
-          <i class="fas fa-phone"></i> {{realtor.phone}}</p>
-        <p>
           <i class="fas fa-envelope-open"></i> {{ realtor.email }} </p>
+        <p>
+          <i class="fas fa-phone"></i> {{realtor.phone}}</p>
+
       </div>
       {% endfor %}
       {% else %}

@@ -40,7 +40,7 @@
 <!-- Listing -->
 <section id="listing" class="py-4">
     <div class="container">
-        <a href="{% url 'listings' %}" class="btn btn-light mb-4">Back To Listings</a>
+        <a href="{% url 'listings' %}" class="btn btn-dark mb-4">Back To Listings</a>
         <div class="row">
             <div class="col-md-9">
                 <!-- Home Main Image -->
@@ -94,19 +94,19 @@
                 <div class="row mb-5 fields">
                     <div class="col-md-6">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-money-bill-alt"></i> Asking Price:
                                 <span class="float-right">${{ listing.price | intcomma }}</span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-bed"></i> Bedrooms:
                                 <span class="float-right">{{listing.bedrooms}}</span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-bath"></i> Bathrooms:
                                 <span class="float-right">{{listing.bathrooms}}</span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-car"></i> Garage:
                                 <span class="float-right">{{listing.garage}}
                                 </span>
@@ -115,20 +115,20 @@
                     </div>
                     <div class="col-md-6">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-th-large"></i> Square Feet:
                                 <span class="float-right">{{listing.sqft}}</span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-square"></i> Lot Size:
                                 <span class="float-right">{{listing.lot_size}} Acres
                                 </span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-calendar"></i> Listing Date:
                                 <span class="float-right">{{ listing.list_date | date:"N d, Y " }}</span>
                             </li>
-                            <li class="list-group-item text-secondary">
+                            <li class="list-group-item text-warning">
                                 <i class="fas fa-bed"></i> Realtor:
                                 <span class="float-right">{{ listing.realtor }}
                                 </span>
@@ -150,12 +150,12 @@
                 <div class="card mb-3">
                     <img class="card-img-top" src="{{ listing.realtor.photo.url }}" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">Property Realtor</h5>
-                        <h6 class="text-secondary">{{ listing.realtor }}</h6>
+                        <h5 class="card-title">Property Agent</h5>
+                        <h6 class="text-warning">{{ listing.realtor }}</h6>
                     </div>
                 </div>
-                <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An
-                    Inquiry</button>
+                <button class="btn-dark btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Need More
+                    Info?</button>
             </div>
         </div>
     </div>
